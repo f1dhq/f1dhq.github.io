@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Market Clothing</title>
+</head>
+<body>
+  <h1>My Clothing Search</h1>
+
+  <input id="searchInput" type="text" placeholder="Search for clothing, brands, etc.">
+
+  <button id="openBtn">Open on Grailed</button>
+
+  <script>
+    document.getElementById("openBtn").onclick = function () {
+      const query = document.getElementById("searchInput").value;
+      if (!query) return;
+
+      const encoded = encodeURIComponent(query);
+      window.open("https://www.grailed.com/search?q=" + encoded, "_blank");
+    };
+  </script>
+</body>
+</html>
