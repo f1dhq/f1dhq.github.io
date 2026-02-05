@@ -1,15 +1,29 @@
-<script>
-  document.getElementById("openBtn").onclick = function () {
-    const query = document.getElementById("searchInput").value.trim();
-    if (!query) return;
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Market Clothing</title>
+</head>
+<body>
+  <h1>My Clothing Search</h1>
 
-    // Make the query URL-safe
-    const encoded = encodeURIComponent(query);
+  <input id="searchInput" type="text" placeholder="Search for clothing, brands, etc.">
 
-    // Correct Grailed search URL
-    const url = "https://www.grailed.com/shop?query=" + encoded;
+  <button id="openBtn">Open on Grailed</button>
 
-    // Open in a new tab
-    window.open(url, "_blank");
-  };
-</script>
+  <script>
+    document.getElementById("openBtn").onclick = function () {
+      const query = document.getElementById("searchInput").value.trim();
+      if (!query) return;
+
+      // Make the query URL-safe
+      const encoded = encodeURIComponent(query);
+
+      // Correct Grailed search URL
+      const url = "https://www.grailed.com/shop?query=" + encoded;
+
+      // Open in a new tab
+      window.open(url, "_blank");
+    };
+  </script>
+</body>
+</html>
